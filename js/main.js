@@ -48,17 +48,15 @@ function displayCats(cats, containerId) {
     }
     
     container.innerHTML = cats.map(cat => `
-        <div class="cat-card">
+        <div class="card">
             <div class="card-img-container">
                 <img src="${cat.photo_url}" alt="${cat.name}" onerror="this.src='assets/no_image.png'" loading="lazy">
             </div>
             <div class="cat-info">
                 <h3>${cat.name}</h3>
-                <p class="cat-description">${cat.description}</p>
-                <div class="cat-details">
-                    <p><span class="detail-label">Возраст:</span> ${cat.age}</p>
-                    <p><span class="detail-label">Пол:</span> ${cat.gender}</p>
-                </div>
+                <p>${cat.description}</p>
+                <p><span>Возраст:</span> ${cat.age}</p>
+                <p><span>Пол:</span> ${cat.gender}</p>
                 <p class="${cat.found_home === 'Да' ? 'found-home' : 'looking-home'} status-badge">
                     ${cat.found_home === 'Да' ? '🏠 Обрёл дом!' : '❤️ Ищет дом!'}
                 </p>
