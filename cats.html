@@ -34,26 +34,6 @@
             <h2>Обрели дом</h2>
             <div id="cats-with-home" class="cards-container"></div>
         </section>
-
-        <script>
-            fetch('data/cats.csv')
-                .then(response => response.text())
-                .then(data => {
-                const cats = parseCSV(data);
-                displayCats(cats, 'cats-seeking-home', cat => cat.found_home === 'Нет');
-                displayCats(cats, 'cats-with-home', cat => cat.found_home === 'Да');
-            });
-
-            function displayCats(cats, containerId, filterFn) {
-                const container = document.getElementById(containerId);
-                cats.filter(filterFn).forEach(cat => {
-                    const card = document.createElement('div');
-                    card.className = 'card';
-                    card.innerHTML = `...`;
-                    container.appendChild(card);
-                });
-            }
-        </script>
     </main>
     <footer>
         <div class="footer-content">

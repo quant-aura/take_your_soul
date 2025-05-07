@@ -48,7 +48,7 @@ function displayCats(cats, containerId) {
     }
     
     container.innerHTML = cats.map(cat => `
-        <div class="card">
+        <div class="cat-card">
             <div class="card-img-container">
                 <img src="${cat.photo_url}" alt="${cat.name}" onerror="this.src='assets/no_image.png'" loading="lazy">
             </div>
