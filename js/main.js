@@ -50,8 +50,7 @@ function displayCats(cats, containerId) {
     container.innerHTML = cats.map(cat => `
         <div class="card">
             <div class="card-img-container">
-                <img src="${cat.photo_url}" alt="${cat.name}" 
-                    onerror="this.src='assets/no_image.png'" loading="lazy">
+                <img src="${cat.photo_url}" alt="${cat.name}" onerror="this.src='assets/no_image.png'" loading="lazy">
             </div>
             <div class="cat-info">
                 <h3>${cat.name}</h3>

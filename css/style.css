@@ -103,6 +103,13 @@ main {
     margin: 0 auto 1.5rem;
 }
 
+#featured-cats-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 25px;
+    margin: 30px 0;
+}
+
 /* Карточки */
 .cards-container {
     display: grid;
@@ -119,6 +126,7 @@ main {
     overflow: hidden;
     transition: transform 0.3s, box-shadow 0.3s;
     background-color: var(--white);
+    width: 200px;
 }
 
 .card:hover {
@@ -127,8 +135,7 @@ main {
 }
 
 .card-img-container {
-    height: 200px;
-    overflow: hidden;
+    height: 250px;
 }
 
 .card img {
