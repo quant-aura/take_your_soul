@@ -58,7 +58,7 @@ function displayCats(cats, containerId) {
                 <p><span>Возраст:</span> ${cat.age}</p>
                 <p><span>Пол:</span> ${cat.gender}</p>
                 <p class="${cat.found_home === 'Да' ? 'found-home' : 'looking-home'} status-badge">
-                    ${cat.found_home === 'Да' ? '🏠 Обрёл дом!' : '❤️ Ищет дом!'}
+                    ${cat.found_home === 'Да' ? '🏠 Дом найден)' : '❤️ Ищет дом!'}
                 </p>
             </div>
         </div>
