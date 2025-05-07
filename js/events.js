@@ -17,7 +17,9 @@ async function loadAllEvents() {
 
 function displayEvents(events, containerId) {
     const container = document.getElementById(containerId);
-    if (!container) return;
+    if (!container) {
+        return;
+    }
     
     container.innerHTML = events.map(event => `
         <div class="card">

@@ -8,8 +8,8 @@ async function loadAllCats() {
         const data = await response.text();
         const cats = parseCSV(data);
     
-        displayCats(cats.filter(cat => cat.found_home === 'Нет'), 'cats-seeking-home');
-        displayCats(cats.filter(cat => cat.found_home === 'Да'), 'cats-with-home');
+        displayCats(cats.filter(cat => cat.found_home === 'Нет').slice(0, 3), 'cats-seeking-home');
+        displayCats(cats.filter(cat => cat.found_home === 'Да').slice(0, 3), 'cats-with-home');
     } catch (error) {
         console.error('Ошибка загрузки данных о котиках:', error);
     }
@@ -17,19 +17,24 @@ async function loadAllCats() {
 
 function displayCats(cats, containerId) {
     const container = document.getElementById(containerId);
-    if (!container) return;
+    if (!container) {
+        console.error(`Элемент с ID ${containerId} не найден`);
+        return;
+    }
     
     container.innerHTML = cats.map(cat => `
         <div class="card">
-            <img src="${cat.photo_url}" alt="${cat.name}">
-            <div class="card-content">
+            <img src="${cat.photo_url}" alt="${cat.name}" onerror="this.src='assets/no_image.png'">
+            <div class="cat-info">
                 <h3>${cat.name}</h3>
                 <p>${cat.description}</p>
-                <p><strong>Возраст:</strong> ${cat.age}</p>
-                <p><strong>Пол:</strong> ${cat.gender}</p>
-                ${cat.found_home === 'Да' 
-                    ? '<p class="found-home">Обрёл дом!</p>' 
-                    : '<p class="looking-home">Ищет дом!</p>'}
+                <div>
+                    <p><span>Возраст:</span> ${cat.age}</p>
+                    <p><span>Пол:</span> ${cat.gender}</p>
+                </div>
+                <p class="${cat.found_home === 'Да' ? 'found-home' : 'looking-home'} status-badge">
+                    ${cat.found_home === 'Да' ? '🏠 Обрёл дом!' : '❤️ Ищет дом!'}
+                </p>
             </div>
         </div>
     `).join('');

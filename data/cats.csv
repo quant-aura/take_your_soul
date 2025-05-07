@@ -1,6 +1,6 @@
 id,name,description,photo_url,found_home,age,gender
-1,Мара,Ласковая и игривая. Любит играть с мячиками.,https://drive.google.com/file/d/1vewVFdl_zsM2R4uyQrbpn3bOiR1n9W0_,Да,2 года,Девочка
-2,Люся,Стеснительная и активная одномоментно.,https://drive.google.com/file/d/10FwQs49XziFoYG8ZXzZzMMvnJKYEu-xQ,Да,2 года,Девочка
-3,Печаля,Обожает спать на солнышке и мурлыкать.,https://drive.google.com/file/d/1z8k8itPg0SUw085kL3WrkTClqEbl4714,Да,3 года,Девочка
-4,Глаша,Нежная и заботливая. Любит гладиться.,https://drive.google.com/file/d/1k9I0MO9Y0hKirVFS6se5gfwKdaJVtxqV,Да,5 лет,Девочка
-5,Васька,Настоящий охотник! Ловит всех мух в доме.,https://drive.google.com/uc?id=5MNO345,Нет,5 лет,Мальчик
+1,Мара,Ласковая и игривая. Любит играть с мячиками.,assets/mara.jpg,Да,2 года,Девочка
+2,Люся,Стеснительная и активная одномоментно.,assets/liusia.jpg,Да,2 года,Девочка
+3,Печаля,Обожает спать на солнышке и мурлыкать.,assets/pechalya.jpg,Да,3 года,Девочка
+4,Глаша,Нежная и заботливая. Любит гладиться.,assets/glasha.jpg,Да,5 лет,Девочка
+5,Васька,Настоящий охотник! Ловит всех мух в доме.,assets/logo.png,Нет,5 лет,Мальчик
