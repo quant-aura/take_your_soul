@@ -124,7 +124,7 @@ main {
 }
 
 .card img {
-    width: 20%;
+    width: 100%;
     height: 200px;
     object-fit: cover;
 }
@@ -136,6 +136,14 @@ main {
 .card h3 {
     margin-top: 0;
     color: var(--orange);
+}
+
+.cat-info {
+    width: 66.66%;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .looking-home {
@@ -207,5 +215,9 @@ footer {
     
     .hero h1 {
         font-size: 2rem;
+    }
+
+    .cat-info {
+        width: 30%;
     }
 }
